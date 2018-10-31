@@ -1,0 +1,210 @@
+\documentclass[8pt,landscape]{scrartcl}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,landscape]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsfonts}
+\usepackage{multicol}
+\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{gensymb}
+%\usepackage{dsfont}
+\usepackage{calc}
+%\usepackage[permil]{overpic}
+%\usepackage{graphicx}
+%\graphicspath{{gfx/}}
+\usepackage{blindtext}
+
+\author{martinhediger}
+\title{Formelsammlung MGLI}
+\begin{document}
+
+Todo:\\
+- Aufgabe III 13
+- Verkn\"upfung von Relationen\\
+- Rechenregeln Quantoren\\
+- Injektiv, bijektiv, surjektiv\\
+- Eulerkreise: Algorithmen\\
+- Rechnregeln kartesisches Produkt L.5-3\\
+- Kruskal, von Prim Algorithman\\
+- Skizze "Wertemenge", "Definitionsbereich", "Bildmenge"
+
+
+\setlength{\columnsep}{1cm}
+\begin{multicols}{3}
+Martin Hediger, FHNW
+
+
+
+
+\section{Zahlenmengen}
+\begin{small}
+$\mathbb{N} := \{0, 1, 2, ...\} $ - nat\"urliche Zahlen\\
+$\mathbb{Z} := \{..., -2, -1, 0, 1, 2, ...\}$ - ganze Zahlen\\
+$\mathbb{Q} := \{\frac{m}{n} | m \in \mathbb{Z} \land n \in \mathbb{N} \land n \neq 0 \}$ - rationale Zahlen\\
+$\mathbb{R} := \{x | x \mbox{ als endlicher oder unendlicher Bruch darstellbar} \}$ - reelle Zahlen
+\end{small}
+
+
+
+\section{Aussagenlogik}
+\begin{small}
+
+\begin{tabular}{ll||c}
+A & B & A $\land$ B  \\ \cline{1-3}
+0 & 0 &           0  \\
+0 & 1 &           0  \\
+1 & 0 &           0  \\
+1 & 1 &           1
+\end{tabular}
+\begin{tabular}{ll||c}
+A & B & A $\lor$ B  \\ \cline{1-3}
+0 & 0 &           0  \\
+0 & 1 &           1  \\
+1 & 0 &           1  \\
+1 & 1 &           1
+\end{tabular}
+\begin{tabular}{ll||c}
+A & B & A $\implies$ B  \\ \cline{1-3}
+0 & 0 &           1  \\
+0 & 1 &           1  \\
+1 & 0 &           0  \\
+1 & 1 &           1
+\end{tabular}
+\begin{tabular}{ll||c}
+A & B & A $\iff$ B  \\ \cline{1-3}
+0 & 0 &           1  \\
+0 & 1 &           0  \\
+1 & 0 &           0  \\
+1 & 1 &           1
+\end{tabular}
+\end{small}
+
+
+
+
+\section{Mengenalgebra}
+\begin{small}
+\subsection{Rechenregeln}
+\begin{tabular}{lll}
+Operatoren    & $\cap/\cup \to \text{AND/OR} \to \text{Konj/Disj}$ &                  \\
+% Dualität      & $\bar{0} = 1$ & \bar{1} = 0$                       \\
+Idempotenz    & $A \cap A = A$                          & $A \cup A = A$              \\
+Kommutativ    & $A \cap B = B \cap A$                   & $A \cup B = B \cup A$       \\
+Identit\"at   & $A \cap G = A$                          & $A \cup \emptyset = A$      \\
+              & $A \cap \emptyset = \emptyset$          & $A \cup G = G$              \\
+Assoziativ    & $(A \cap B) \cap C = A \cap (B \cap C)$ &                             \\
+              & $(A \cup B) \cup C = A \cup (B \cup C)$ &                             \\
+Absorption    & $A \cap (A \cup B) = A$                 & $A \cup (A \cap B) = A$     \\
+Distributiv   & $A \cap (B \cup B) = (A \cap B) \cup (A \cap C)$ &                    \\
+              & $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$                      \\
+De Morgan     & $(A \cap B)^c = A^c \cup B^c$           & $(A \cup B)^c = A^c \cap B^c$ \\
+Komplement\"ar& $A \cap A= \emptyset$                   & $A \cup A^c = G$            \\
+              & $(A^c)^c = A$                           &                             \\
+              & $G^c = \emptyset$                       &                             \\
+              & $\emptyset^c = G$                       &                             \\
+Teilmengen    & $A \subseteq B \implies (A \cap B = A)$ &                             \\
+              & $A \subseteq B \implies (A \cup B = B)$ &                             \\
+              & $(A \subseteq B ) \land (B \subseteq C) \implies (A \subseteq C)$ &   \\
+\end{tabular}
+
+\subsection{Definitionen}
+\textbf{Vereinigung:} $A \cup B := \{ x \in G | x \in A \lor x \in B \}$\\
+\textbf{Schnitt:}     $A \cap B := \{ x \in G | x \in A \land x \in B \}$\\
+\textbf{Differenz:}   $A \setminus B := \{x \in G | (x \in A \land x \not\in B) \}$\\
+\textbf{Sym Diff.:}   $A \bigtriangleup B := \{x \in G | (x \in A \land x \not \in B) \lor (x \in B \land x \not \in A) \}$\\
+\textbf{Complement:}  $A^c := \{x \in G | x \not \in A \} = G \setminus A$\\
+\textbf{Kart. Produkt:} $A \times B := \{ (x, y) | x \in A \land y \in B \}$\\
+
+
+
+\end{small}
+
+
+
+
+
+
+
+\section{Relationen}
+\begin{small}
+
+\begin{bf}Reflexivit\"at:\end{bf} Jeder Knoten hat eine Schleife, $\forall x \in A: (x, x) \in R$.
+Kontrollieren: $(x, x) \in R$?\\
+\begin{bf}Symmetrie:\end{bf} F\"ur jeden Pfeil gibt es einen Pfeil in Gegenrichtung (Schleifen siend gleichzeitig Pfeil uend Pfeil in Gegenrichtung).
+Kontrollieren $(x, y) \in R$ und $(y, x) \in R$?\\
+$\forall x, y \in A : \left( (x, y) \in R \implies (y, x) \in R \right)$\\ 
+\begin{bf}Antisymmetrie:\end{bf} F\"ur jeden Pfeil, der nicht Schleife ist, gibt es keinen Pfeil in Gegenrichtung.\\
+$\forall x, y \in A : \left( x \neq y \land (x, y) \in R \implies (y, x) \not\in R \right)$\\ 
+Kontrollieren $(x, y) \in R$ und $(y, x) \not\in R$? Falls ja ist es antisymmetrisch\\
+\begin{bf}Transitivit\"at:\end{bf} Jeder Pfad entlang zweier Pfeile (mit gleichem Richtungssinn) hat einen abk\"urzenden Pfeil vom Anfangs- zum Endknoten des Pfades\\
+$\forall x, y, z \in A: \left( (x, y) \in R \land (y, z) \in R \implies (x, z) \in R \right)$\\
+Beachten: f\"ur Transitivit\"at ist erforderlich mind. zwei Paare $(x, y) \in R$ und $(y, z) \in R$ zu haben, ansonsten w\"are Pr\"amisse der Definition der Implikation nicht erf\"ullt.
+Wenn nicht zwei Paare vorhanden sind $\in R$, ist die Relation automatisch transitiv.
+
+
+\subsection{\"Aquivalenzrelationen}
+\begin{bf}Definition:\end{bf} Eine bin\"are Relation $R \subseteq A \times A $ heisst \"Aquivalenzrelation gdw. sie reflexiv, symmetrisch, transitiv ist.\\
+Zwei Objekte $x, y \in A$ mit $(x, y) \in R$ heissen dann \"aquivalent zueinander, geschrieben $x \sim y$, oder auch $\sim (x, y)$ wenn $(x, y) \in \sim$ ist.\\
+\begin{bf}\"Aquivalenzklasse:\end{bf} $\left[x\right]_{\sim} := \{ y \in A | x \sim y \}$\\\\ 
+\begin{bf}Beispiel:\end{bf} \"Aquivalenzrelation mit drei \"Aquivalenzklassen\\
+$x \sim y \iff 3| \left| x - y \right|$ (3 teilt Betrag):\\
+$\left[0\right]_{\sim} = \{ 0, 3, 6, 9, ...\}$\\
+$\left[1\right]_{\sim} = \{ 1, 4, 7, 10, ...\}$\\
+$\left[2\right]_{\sim} = \{ 2, 5, 8, 11, ...\}$\\\\
+\"Aquivalenzrelationen partitionieren ihre Menge und sind gegenseitig disjunkt.
+
+\subsection{Ordnungsrelationen}
+\begin{bf}Definition:\end{bf} Eine Relation $R$ auf Menge $A$ heisst Halbordnung gdw. R reflexiv, antisymmetrisch, transitiv ist.\\
+\begin{bf}Beispiel:\end{bf} $M := \{0, 1, 2, 3\}$, dann ist $\preceq := \{ (x, y) \in M^2 | x \leq y \}$ eine Halbordnung auf M.\\\\
+\begin{bf}Teilbarkeit:\end{bf} $a|b \iff \exists m \in \mathbb{Z} : b = ma$
+
+\subsection{Grundbegriffe Halbordnungen}
+\textit{Minimales Element:} Keine direkten Vorg\"anger\\
+\textit{Kleinstes Element:} Alle anderen Elemente nachfolger von $x$\\
+\textit{Maximales Element:} Keine direkten Nachfolger\\
+\textit{Gr\"osstes Element:} Alle anderen Elemente Vorg\"anger von $x$\\\\
+\textbf{Zeichnen:} Starten bei Knoten von dem m\"oglichst viele Pfeile ausgehen (ohne Schleifen).
+Dann weitergehen, transitive Pfeile weglassen.
+Gerichteter Graph: \underline{$a \rightarrow b \rightarrow c$, $a \rightarrow c$} wird zu $a - b - c$.
+
+\subsection{Verkn\"upfung}
+\textbf{Definition:} $R \subseteq A \times B$ und $S \subseteq B \times C$, Verkn\"upfung\\
+$S \circ R := \{ (x, z) \in A \times C | \exists y \in B : ( (x, y) \in R \land (y, z) \in S ) \}$
+
+\subsection{Inverse Relation}
+Relation umdrehen: Beide Mengen vertauschen und Pfeile umdrehen $R^{-1}$.\\
+\textbf{Definition:} F\"ur $R \subseteq A \times B$, $R^{-1} = \{ (y, x) \in B \times A | (x, y) \in R \}$
+
+\end{small}
+
+
+
+\section{Funktionen}
+\begin{small}
+
+\subsection{Allgemein}
+Bei (totalen) Funktionen geht von linken Knoten genau ein Pfeil aus.
+Eine totale Funktion ist rechtseindeutig.
+\textbf{Rechtseindeutigkeit:} Das was ich rechts habe ist für ein linkes Element eindeutig.\\\\
+\textbf{Beispiel:} Ist homogene Relation $R_3 = \{ (x, y) \in \mathbb{R}^2 | y^2 = x \}$ eine Funktion?\\
+Nein, denn es sind z.b. $(1, -1) \in R_3$, aber auch $(1, 1) \in R_3$.
+Somit existieren f\"ur $x=1 \in \mathbb{R}$ zwei Elemente $y_1 = -1 \in \mathbb{R}$ und $y_2 = 1 \in \mathbb{R}$, so dass $(1, 1) \in R_3$ und $(1, -1) \in R_3$ ist.
+
+
+
+\subsection{Injektiv, Surjektiv, Bijektiv}
+\textbf{surjektiv:} Alle Elemente der Wertemenge $B$ gehören zur Bildmenge $f(A)$:\\
+$\forall y \in B \exists x \in A : f(x) = y$, dh. falls $f(A) = B$\\
+\textbf{injektiv:} F\"ur zwei verschiedene Argumente $x_1, x_2 \in A$ sind die dazugeh\"origen Funktionswerte $f(x_1)$ und $f(x_2)$ unterschiedlich:\\
+$\forall x_1, x_2 \in A : (x_1 \not = x_2 \implies f(x_1) \not = f(x_2))$
+
+
+
+
+
+\end{small}
+
+
+\end{multicols}
+\end{document}
