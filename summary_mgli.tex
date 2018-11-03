@@ -25,11 +25,7 @@
 \setlength{\columnsep}{1cm}
 \begin{multicols}{3}
 Todo:\\
-- Aufgabe III 13
-- Verkn\"upfung von Relationen\\
 - Eulerkreise: Algorithmen\\
-- $=$, $leq$, ... trans, refl., sym.\\
-- Rechnregeln kartesisches Produkt L.5-3\\
 - Kruskal, von Prim Algorithman\\
 - Skizze "Wertemenge", "Definitionsbereich", "Bildmenge"\\
 Martin Hediger, FHNW
@@ -86,11 +82,15 @@ A & B & A $XOR$ B  \\ \cline{1-3}
 0 & 0 &           0  \\
 0 & 1 &           1  \\
 1 & 0 &           1  \\
-1 & 1 &           0
+1 & 1 &           0  \\
 \end{tabular}
 
-\textbf{Implikation:} Wenn wir sagen $A$ \textit{impliziert} $B$, dann bedeutet dies \textit{``Wenn $A$ wahr ist, dann kann die Aussage, dass dann $B$ falsch ist, nicht mehr wahr sein''.}
-
+\textbf{Implikation:} Wenn wir sagen $A$ \textit{impliziert} $B$, dann bedeutet dies \textit{``Wenn $A$ wahr ist, dann kann die Aussage, dass dann $B$ falsch ist, nicht mehr wahr sein''.}\\
+\textbf{Kontraposition:} $(A \implies B) \equiv (\lnot B \implies \lnot A)$\\
+Regen impliziert nasse Strassen.
+Trockene Strasse impliziert Sonnenschein.
+Nasse Strasse impliziert \textbf{nicht} Regen.
+Sonnenschein impliziert \textbf{nicht} trockene Strassen.
 
 %\end{small}
 
@@ -177,6 +177,14 @@ Teilmengen    & $A \subseteq B \implies (A \cap B = A)$ &                       
 
 %\end{small}
 
+
+\subsection{Partition}
+Alle Partitionen von $\{0, 1, 2\}$:
+$\{ \{0\}, \{1\}, \{2\} \}$, $\{ \{0\}, \{1, 2\} \}$, $\{ \{1\}, \{0, 2\} \}$, $\{ \{2\}, \{0, 1\} \}$, $\{ \{0, 1, 2\} \}$.
+\subsection{Potenzmenge}
+Menge aller Teilmengen einer Menge $A$ wird Potenzmenge genannt.\\
+$A := \{ 1, 2, 3 \}$, dann ist $P(A) = \{ \emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, A\}$.\\
+M\"achtigkeit der Potenzmenge einer endlichen Menge ist $\left|P(A)\right| = 2^{|A|}$.
 
 
 
