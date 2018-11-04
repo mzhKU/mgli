@@ -12,7 +12,7 @@
 %\usepackage{dsfont}
 \usepackage{calc}
 %\usepackage[permil]{overpic}
-%\usepackage{graphicx}
+\usepackage{graphicx}
 %\graphicspath{{gfx/}}
 \usepackage{blindtext}
 
@@ -24,10 +24,6 @@
 
 \setlength{\columnsep}{1cm}
 \begin{multicols}{3}
-Todo:\\
-- Eulerkreise: Algorithmen\\
-- Kruskal, von Prim Algorithman\\
-- Skizze "Wertemenge", "Definitionsbereich", "Bildmenge"\\
 Martin Hediger, FHNW
 
 %\begin{klm}
@@ -169,9 +165,10 @@ Teilmengen    & $A \subseteq B \implies (A \cap B = A)$ &                       
 \textbf{Vereinigung:} $A \cup B := \{ x \in G | x \in A \lor x \in B \}$\\
 \textbf{Schnitt:}     $A \cap B := \{ x \in G | x \in A \land x \in B \}$\\
 \textbf{Differenz:}   $A \setminus B := \{x \in G | (x \in A \land x \not\in B) \}$\\
-\textbf{Sym Diff.:}   $A \bigtriangleup B := \{x \in G | (x \in A \land x \not \in B) \lor (x \in B \land x \not \in A) \}$\\
+\textbf{Sym Diff.:}   $A \bigtriangleup B := \{x \in G | (x \in A \land x \not \in B) \lor (x \in B \land x \not \in A) \}$, $A \bigtriangleup B = (A \setminus B) \cup (B \setminus A)$ \\
 \textbf{Complement:}  $A^c := \{x \in G | x \not \in A \} = G \setminus A$\\
 \textbf{Kart. Produkt:} $A \times B := \{ (x, y) | x \in A \land y \in B \}$\\
+\textbf{Teilmenge:} $x \in A \implies x \in B$, dann ist $A \subseteq B$, dh. $A$ ist Teilmenge von $B$ und $B$ ist Obermenge von $A$
 
 
 
@@ -181,10 +178,16 @@ Teilmengen    & $A \subseteq B \implies (A \cap B = A)$ &                       
 \subsection{Partition}
 Alle Partitionen von $\{0, 1, 2\}$:
 $\{ \{0\}, \{1\}, \{2\} \}$, $\{ \{0\}, \{1, 2\} \}$, $\{ \{1\}, \{0, 2\} \}$, $\{ \{2\}, \{0, 1\} \}$, $\{ \{0, 1, 2\} \}$.
+
+
 \subsection{Potenzmenge}
 Menge aller Teilmengen einer Menge $A$ wird Potenzmenge genannt.\\
 $A := \{ 1, 2, 3 \}$, dann ist $P(A) = \{ \emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, A\}$.\\
-M\"achtigkeit der Potenzmenge einer endlichen Menge ist $\left|P(A)\right| = 2^{|A|}$.
+$P(\emptyset) = \{ \emptyset \} = \{ \{ \} \}$\\
+M\"achtigkeit der Potenzmenge einer endlichen Menge ist $\left|P(A)\right| = 2^{|A|}$.\\
+\textbf{Beachten:}\\
+$(x, y) \in M \times M \implies \{ \{ (x, y) \} \} \subseteq P(M \times M)$\\
+$(x, y) \in M \times M \implies \{ (x, y) \} \in P(M \times M)$
 
 
 
@@ -221,7 +224,10 @@ $\left[2\right]_{\sim} = \{ 2, 5, 8, 11, ...\}$\\\\
 
 \subsection{Ordnungsrelationen}
 \begin{bf}Definition:\end{bf} Eine Relation $R$ auf Menge $A$ heisst Halbordnung gdw. R reflexiv, antisymmetrisch, transitiv ist.\\
-\begin{bf}Beispiel:\end{bf} $M := \{0, 1, 2, 3\}$, dann ist $\preceq := \{ (x, y) \in M^2 | x \leq y \}$ eine Halbordnung auf M.\\\\
+\begin{bf}Beispiel:\end{bf} $M := \{0, 1, 2, 3\}$, dann ist $\preceq := \{ (x, y) \in M^2 | x \leq y \}$ eine Halbordnung auf M.
+Hier $\preceq = \{ (0, 0), (0, 1), (0, 2), (0, 3), (1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3)\}$.
+\textbf{Vergleichbarkeit:} Zwei Elemente $x$, $y$ einer Menge $M$ mit einer Halbordnung $\preceq$ heissen unvergleichbar gdw. $(x, y) \not \in \preceq \land (y, x) \not \in \preceq$.
+
 \begin{bf}Teilbarkeit:\end{bf} $a|b \iff \exists m \in \mathbb{Z} : b = ma$
 
 \subsection{Grundbegriffe Halbordnungen}
@@ -256,6 +262,9 @@ Eine totale Funktion ist rechtseindeutig.
 Nein, denn es sind z.b. $(1, -1) \in R_3$, aber auch $(1, 1) \in R_3$.
 Somit existieren f\"ur $x=1 \in \mathbb{R}$ zwei Elemente $y_1 = -1 \in \mathbb{R}$ und $y_2 = 1 \in \mathbb{R}$, so dass $(1, 1) \in R_3$ und $(1, -1) \in R_3$ ist.
 
+\subsection{Begriffe Funktionen}
+\includegraphics[width=0.95\linewidth]{./begriffe_funktionen.pdf}
+
 
 
 \subsection{Injektiv, Surjektiv, Bijektiv}
@@ -265,7 +274,78 @@ $\forall y \in B \exists x \in A : f(x) = y$, dh. falls $f(A) = B$\\
 $\forall x_1, x_2 \in A : (x_1 \not = x_2 \implies f(x_1) \not = f(x_2))$
 
 
+\section{Graphen}
+\subsection{Begriffe}
+\textbf{Kreis:} Wenn $v_{init} = v_{end}$, nicht zwingend jede Kante Teil vom Kreis.
 
+\subsection{Eulergraphen}
+Wird in einem Weg jede (!) Kante genau einmal besucht, heisst der Weg Eulerweg.
+
+\textbf{Satz:} In einem Graphen oder Multigraphen kann es nur eine gerade Anzahl von Knoten mit ungeradem Grad haben.
+
+\textbf{Eulerweg I:} F\"ur jeden Eulerweg gilt: jeder Knoten, der nicht End- oder Anfangsknoten, also ``Zwischenknoten'' ist, muss zu einer bisher im Weg unbenutzetn hineinf\"uhrenden Kante eine bisher unbenutze herausf\"uhrende Kante haben.\\
+Bei K\"onigsberg: Jeder Knoten hat ungerade Anzahl Kanten, diese k\"onnen alle nicht Zwischenknoten des Weges sein.
+
+\textbf{Notwendige Eulerbedingung f\"ur Eulerwege:} Existiert in einem Graph oder Multigraph ein Eulerweg, dann haben notwendigerweise alle Knoten bis auf zwei einen geraden Grad (also h\"ochstens zwei, bzw. 0 der 2, haben einen ungeraden Grad).\\
+$\rightarrow$ \textcolor{red}{Wenn der Graph oder Multigraph zwei Knoten mit ungeradem Grad besitzt, muss der Eulerweg in einem von beiden starten und im anderen enden.}
+
+\textbf{Notwendige und hinreichende Eulerbedingung f\"ur Eulerwege:} Ein Graph oder Multigraph hat genau dann einen Eulerweg, wenn er zusammenh\"angend ist und die notwendige Eulerbedingung erf\"ullt ist, also entweder keinen oder zwei Knoten mit ungeradem Grad hat.
+
+\textbf{Notwendige und hinreichende Bedingung f\"ur Eulerkreis:} Ein Graph hat Eulerkreis, genau wenn er zusammenh\"angend ist und \underline{jeder} Knoten geraden Grad hat.
+
+
+
+\subsection{Hierholzer: Berechnung Eulerweg}
+\textbf{Input:} Zusammenh\"angender Graph/Multigraph mit maximal zwei Knoten von ungeradem Grad\\
+1) W\"ahle beliebigen Startknoten (falls es ungerade Knoten gibt, w\"ahle einen solchen)\\
+2) Gehe von diesem Knoten aus \"uber noch nicht besuchte Kanten so lange weiter bis du nicht mehr weiterkommst\\
+3) Alle Kanten schon einmal besucht?\\
+$\rightarrow$ Ja : Ende\\
+$\rightarrow$ Nein: W\"ahle beliebigen Knoten mit noch unbesuchten Kanten auf diesem Weg als neuen Startknoten und gehe zu 2)\\
+Wege Zusammengef\"ugt ergeben einen Eulerweg
+
+\subsection{Minimal aufspandender Baum}
+
+``\textit{Greedy}'': In jedem Schritt die beste Wahl treffen, die momentan zur Verf\"ugung steht.\\
+
+\textbf{Von Prim:} ``\textit{In jedem Schritt wird die k\"urzest m\"ogliche Br\"ucke gebaut.}''\\
+W\"ahle einen speziellen Ort aus (Festland) und nenne ihn erreichbar.
+Alle anderen Orte sind zun\"achst nicht erreichbar.
+F\"uhre den folgenden Schritt so oft aus, bis alle Orte erreichbar sind:\\
+Baue die k\"urzeste Br\"ucke zwischen zwei Orten, von denen einer erreichbar und der andere nicht erreichbar ist, und nenne den bislang nicht erreichbaren Ort erreichbar.\\
+
+\textbf{Von Kruskal:} ``\textit{Baue in jedem Schritt die k\"urzeste Br\"ucke zwischen zwei beliebige bislang unverbunden Orten.}''\\
+F\"uhre den folgenden Schritt so oft aus, bis alle Orte untereinander durch Br\"ucken verbunden sind: Baue die k\"urzeste Br\"ucke, die zwei Orte verbindet, die bisland nicht voneinander aus erreichbar sind.
+
+\textbf{Eigenschaften:} Jedes andere Br\"uckensystem wird gesamthaft l\"anger.
+
+
+
+\subsection{Matrixdarstellung}
+Knoten (Symbole V, v, w) $\rightarrow$ Zeilen\\
+\textbf{Adjazenzma., ungerichtet:} $a_{ij}$ = 1, wenn $\{v_i, v_j\} \in E$, 0 sonst\\
+\textbf{Adjazenzma., gerichtet:} $a_{ij}$ = 1, wenn $(v_i, v_j) \in E$, 0 sonst\\\\ 
+\textbf{Inzidenzma., ungerichtet:} $b_{ij} = 1$ wenn $\exists w \in V: e_j = \{v_i, w \} \in E$, 0 sonst\\
+\textbf{Inzidenzma., gerichtet:} $b_{ij} = 1$, wenn $\exists w \in V : e_j = (vi, w) \in E$, $-1$, wenn $\exists w \in V: e_j = (w, v_i) \in E$, 0 sonst
+
+\includegraphics[width=0.5\linewidth]{inzidenz.pdf}
+
+Adjazenzmatrix\\
+\begin{tabular}{llll}
+0 & 1 & 1 & 0\\
+0 & 0 & 1 & 0\\
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0
+\end{tabular}
+
+
+Inzidenzmatrix (Zeilen = Knoten, Spalten = Kanten):\\
+\begin{tabular}{lllll}
+1 & 1 & 0 & 0 & 0\\
+1 & 0 & 1 & 1 & 0\\
+0 & 0 & 1 & 0 & 1\\
+0 & 1 & 0 & 1 & 1
+\end{tabular}
 
 
 %\end{small}

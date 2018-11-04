@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  3 NOV 2018 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  4 NOV 2018 23:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,6 +636,23 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count116
 \calc@Cskip=\skip55
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+)
+\Gin@req@height=\dimen132
+\Gin@req@width=\dimen133
+)
 (/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
@@ -713,67 +730,106 @@ LaTeX Font Info:    ... okay on input line 21.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count135
-\scratchdimen=\dimen132
+\scratchdimen=\dimen134
 \scratchbox=\box55
 \nofMPsegments=\count136
 \nofMParguments=\count137
 \everyMPshowfont=\toks24
 \MPscratchCnt=\count138
-\MPscratchDim=\dimen133
+\MPscratchDim=\dimen135
 \MPnumerator=\count139
 \makeMPintoPDFobject=\count140
 \everyMPtoPDFconversion=\toks25
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 38.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Overfull \hbox (22.30783pt too wide) in paragraph at lines 101--110
+Overfull \hbox (22.30783pt too wide) in paragraph at lines 97--106
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--110
+Underfull \hbox (badness 10000) in paragraph at lines 97--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
 
-Overfull \hbox (3.25858pt too wide) in paragraph at lines 124--140
+Overfull \hbox (3.25858pt too wide) in paragraph at lines 120--136
 []
  []
 
 
-Overfull \hbox (34.05008pt too wide) in paragraph at lines 145--167
+Overfull \hbox (34.05008pt too wide) in paragraph at lines 141--163
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--167
+Underfull \hbox (badness 10000) in paragraph at lines 141--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--175
-
- []
-
-
-Overfull \hbox (19.97607pt too wide) in paragraph at lines 185--188
+Overfull \hbox (19.97607pt too wide) in paragraph at lines 184--191
 \OML/cmm/m/it/8 A \OT1/cmr/m/n/8 := \OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 1\OML/cmm/m
 /it/8 ; \OT1/cmr/m/n/8 2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3\OMS/cmsy/m/n/8 g$\OT
 1/cmr/m/n/8 , dann ist $\OML/cmm/m/it/8 P\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 A\OT1/
@@ -799,21 +855,7 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 197.
-
-
-Class scrartcl Warning: Usage of deprecated font command `\bf'!
-(scrartcl)              You should note, that in 1994 font command `\bf' has
-(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
-(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrartcl)              shouldn't use such commands any longer and within
-(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrartcl)              See `fntguide.pdf' for more information about
-(scrartcl)              recommended font commands.
-(scrartcl)              Note also, that KOMA-Script will remove the definition
-(scrartcl)              of `\bf' anytime until release of about version 3.20.
-(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 199.
+(scrartcl)              by `\normalfont \bfseries ' on input line 200.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
@@ -855,21 +897,7 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 212.
-
-
-Class scrartcl Warning: Usage of deprecated font command `\bf'!
-(scrartcl)              You should note, that in 1994 font command `\bf' has
-(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
-(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrartcl)              shouldn't use such commands any longer and within
-(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrartcl)              See `fntguide.pdf' for more information about
-(scrartcl)              recommended font commands.
-(scrartcl)              Note also, that KOMA-Script will remove the definition
-(scrartcl)              of `\bf' anytime until release of about version 3.20.
-(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 214.
+(scrartcl)              by `\normalfont \bfseries ' on input line 208.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
@@ -886,19 +914,47 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              by `\normalfont \bfseries ' on input line 215.
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 212--221
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 217.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 218.
+
+
+Underfull \hbox (badness 5316) in paragraph at lines 215--224
 \OT1/cmr/bx/n/8 Definition: \OT1/cmr/m/n/8 Ei-ne bin[]are Re-la-ti-on $\OML/cmm
 /m/it/8 R \OMS/cmsy/m/n/8 ^^R \OML/cmm/m/it/8 A \OMS/cmsy/m/n/8 ^^B \OML/cmm/m/
 it/8 A$ \OT1/cmr/m/n/8 heisst
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--221
+Underfull \hbox (badness 10000) in paragraph at lines 215--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--221
+Underfull \hbox (badness 10000) in paragraph at lines 215--224
 
  []
 
@@ -914,7 +970,7 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 223.
+(scrartcl)              by `\normalfont \bfseries ' on input line 226.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
@@ -928,29 +984,54 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 224.
+(scrartcl)              by `\normalfont \bfseries ' on input line 227.
 
 
-Class scrartcl Warning: Usage of deprecated font command `\bf'!
-(scrartcl)              You should note, that in 1994 font command `\bf' has
-(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
-(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrartcl)              shouldn't use such commands any longer and within
-(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrartcl)              See `fntguide.pdf' for more information about
-(scrartcl)              recommended font commands.
-(scrartcl)              Note also, that KOMA-Script will remove the definition
-(scrartcl)              of `\bf' anytime until release of about version 3.20.
-(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 225.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
-
+Underfull \hbox (badness 5359) in paragraph at lines 226--230
+\OT1/cmr/bx/n/8 Beispiel: $\OML/cmm/m/it/8 M \OT1/cmr/m/n/8 := \OMS/cmsy/m/n/8 
+f\OT1/cmr/m/n/8 0\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1\OML/cmm/m/it/8 ; \OT1/cmr/m
+/n/8 2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3\OMS/cmsy/m/n/8 g$\OT1/cmr/m/n/8 , dann
+ ist $\OMS/cmsy/m/n/8 ^^V\OT1/cmr/m/n/8 := \OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 (\OM
+L/cmm/m/it/8 x; y\OT1/cmr/m/n/8 ) \OMS/cmsy/m/n/8 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--235
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
+\OML/cmm/m/it/8 M[]\OMS/cmsy/m/n/8 j\OML/cmm/m/it/8 x \OMS/cmsy/m/n/8 ^^T \OML/
+cmm/m/it/8 y\OMS/cmsy/m/n/8 g$ \OT1/cmr/m/n/8 ei-ne Hal-b-ord-nung auf M. Hier 
+$\OMS/cmsy/m/n/8 ^^V\OT1/cmr/m/n/8 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
+\OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 (0\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 0)\OML/cmm/m
+/it/8 ; \OT1/cmr/m/n/8 (0\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1)\OML/cmm/m/it/8 ; \
+OT1/cmr/m/n/8 (0\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)\OML/cmm/m/it/8 ; \OT1/cmr/m
+/n/8 (0\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (1\O
+ML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1)\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (1\OML/cmm/m/
+it/8 ; \OT1/cmr/m/n/8 2)\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (1\OML/cmm/m/it/8 ; \O
+T1/cmr/m/n/8 3)\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/
+n/8 2)\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)\OM
+L/cmm/m/it/8 ; \OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)\OMS/cmsy/m/
+n/8 g$\OT1/cmr/m/n/8 .
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 231.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--241
 
  []
 
@@ -958,37 +1039,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--235
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 252--258
+Underfull \hbox (badness 10000) in paragraph at lines 258--264
 
  []
 
-[2] (./summary_mgli.aux) ) 
+<./begriffe_funktionen.pdf, id=20, 261.97874pt x 97.36375pt>
+File: ./begriffe_funktionen.pdf Graphic file (type pdf)
+
+<use ./begriffe_funktionen.pdf>
+Package pdftex.def Info: ./begriffe_funktionen.pdf used on input line 266.
+(pdftex.def)             Requested size: 231.5573pt x 86.06067pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--330
+
+ []
+
+<inzidenz.pdf, id=21, 102.3825pt x 88.33pt>
+File: inzidenz.pdf Graphic file (type pdf)
+ <use inzidenz.pdf>
+Package pdftex.def Info: inzidenz.pdf used on input line 331.
+(pdftex.def)             Requested size: 121.87265pt x 105.15172pt.
+ [2 <./begriffe_funktionen.pdf
+
+pdfTeX warning: pdflatex (file ./begriffe_funktionen.pdf): PDF inclusion: inval
+id other resource which is no dict (key 'ProcSets', type <array>); ignored.
+> <./inzidenz.pdf
+
+pdfTeX warning: pdflatex (file ./inzidenz.pdf): PDF inclusion: invalid other re
+source which is no dict (key 'ProcSets', type <array>); ignored.
+>] (./summary_mgli.aux) ) 
 Here is how much of TeX's memory you used:
- 5275 strings out of 494901
- 74725 string characters out of 6178616
- 246572 words of memory out of 5000000
- 8515 multiletter control sequences out of 15000+600000
+ 5835 strings out of 494901
+ 84480 string characters out of 6178616
+ 267110 words of memory out of 5000000
+ 9034 multiletter control sequences out of 15000+600000
  9874 words of font info for 38 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,10n,46p,296b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on summary_mgli.pdf (2 pages, 168130 bytes).
+ 46i,10n,46p,300b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb>
+Output written on summary_mgli.pdf (2 pages, 262685 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
