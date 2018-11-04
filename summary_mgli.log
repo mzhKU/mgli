@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  4 NOV 2018 23:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  4 NOV 2018 23:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1060,14 +1060,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--316
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--330
+Underfull \hbox (badness 10000) in paragraph at lines 326--331
 
  []
 
 <inzidenz.pdf, id=21, 102.3825pt x 88.33pt>
 File: inzidenz.pdf Graphic file (type pdf)
  <use inzidenz.pdf>
-Package pdftex.def Info: inzidenz.pdf used on input line 331.
+Package pdftex.def Info: inzidenz.pdf used on input line 332.
 (pdftex.def)             Requested size: 121.87265pt x 105.15172pt.
 
 Overfull \vbox (2.91925pt too high) has occurred while \output is active []
@@ -1088,7 +1088,7 @@ source which is no dict (key 'ProcSets', type <array>); ignored.
 Here is how much of TeX's memory you used:
  5835 strings out of 494901
  84480 string characters out of 6178616
- 276837 words of memory out of 5000000
+ 277083 words of memory out of 5000000
  9034 multiletter control sequences out of 15000+600000
  9874 words of font info for 38 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1107,7 +1107,7 @@ blic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb>
-Output written on summary_mgli.pdf (2 pages, 262946 bytes).
+Output written on summary_mgli.pdf (2 pages, 263159 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream
