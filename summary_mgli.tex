@@ -16,6 +16,9 @@
 %\graphicspath{{gfx/}}
 \usepackage{blindtext}
 
+
+\setlength\parindent{0pt}
+
 \author{martinhediger}
 \title{Formelsammlung MGLI}
 \begin{document}
@@ -151,7 +154,7 @@ Absorption    & $A \cap (A \cup B) = A$                 & $A \cup (A \cap B) = A
 Distributiv   & $A \cap (B \cup B) = (A \cap B) \cup (A \cap C)$ &                    \\
               & $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$                      \\
 De Morgan     & $(A \cap B)^c = A^c \cup B^c$           & $(A \cup B)^c = A^c \cap B^c$ \\
-Komplement\"ar& $A \cap A= \emptyset$                   & $A \cup A^c = G$            \\
+Komplement\"ar& $A \cap A^c= \emptyset$                   & $A \cup A^c = G$            \\
               & $(A^c)^c = A$                           &                             \\
               & $G^c = \emptyset$                       &                             \\
               & $\emptyset^c = G$                       &                             \\
@@ -187,8 +190,9 @@ $P(\emptyset) = \{ \emptyset \} = \{ \{ \} \}$\\
 M\"achtigkeit der Potenzmenge einer endlichen Menge ist $\left|P(A)\right| = 2^{|A|}$.\\
 \textbf{Beachten:}\\
 $(x, y) \in M \times M \implies \{ \{ (x, y) \} \} \subseteq P(M \times M)$\\
-$(x, y) \in M \times M \implies \{ (x, y) \} \in P(M \times M)$
-
+$(x, y) \in M \times M \implies \{ (x, y) \} \in P(M \times M)$\\
+\textbf{Anzahl Relationen:}\\
+$M = \{ 1, 2, 3, 4 \}$ $\rightarrow$ Anzahl Relationen $| P( M \times M ) | = 2^{ |M| \times |M| } = 2^{16}$
 
 
 
@@ -211,16 +215,26 @@ Beachten: f\"ur Transitivit\"at ist erforderlich mind. zwei Paare $(x, y) \in R$
 Wenn nicht zwei Paare vorhanden sind $\in R$, ist die Relation automatisch transitiv.
 
 
+
 \subsection{\"Aquivalenzrelationen}
 \begin{bf}Definition:\end{bf} Eine bin\"are Relation $R \subseteq A \times A $ heisst \"Aquivalenzrelation gdw. sie reflexiv, symmetrisch, transitiv ist.\\
 Zwei Objekte $x, y \in A$ mit $(x, y) \in R$ heissen dann \"aquivalent zueinander, geschrieben $x \sim y$, oder auch $\sim (x, y)$ wenn $(x, y) \in \sim$ ist.\\
-\begin{bf}\"Aquivalenzklasse:\end{bf} $\left[x\right]_{\sim} := \{ y \in A | x \sim y \}$\\\\ 
+\begin{bf}\"Aquivalenzklasse:\end{bf} $\left[x\right]_{\sim} := \{ y \in A | x \sim y \}$: ``\textit{Jedes Element steht mit jedem in Relation und nicht in Relation mit Elementen ausserhalb der Klasse}.''\\\\ 
 \begin{bf}Beispiel:\end{bf} \"Aquivalenzrelation mit drei \"Aquivalenzklassen\\
 $x \sim y \iff 3| \left| x - y \right|$ (3 teilt Betrag):\\
 $\left[0\right]_{\sim} = \{ 0, 3, 6, 9, ...\}$\\
 $\left[1\right]_{\sim} = \{ 1, 4, 7, 10, ...\}$\\
 $\left[2\right]_{\sim} = \{ 2, 5, 8, 11, ...\}$\\\\
-\"Aquivalenzrelationen partitionieren ihre Menge und sind gegenseitig disjunkt.
+\"Aquivalenzrelationen partitionieren ihre Menge und sind gegenseitig disjunkt.\\
+\textbf{Bell-Zahlen:} 1, 2, 5, 15, 52, ...
+
+\begin{tabular}{lcccc}
+            & $<$ & $\leq$ & $\neq$ & = \\\hline
+reflexiv    & n   & j      & n      & j \\
+symm.       & n   & n      & j      & j \\
+antisymm.   & j   & j      & n      & j \\
+trans.      & j   & j      & n      & j \\\hline
+\end{tabular}
 
 \subsection{Ordnungsrelationen}
 \begin{bf}Definition:\end{bf} Eine Relation $R$ auf Menge $A$ heisst Halbordnung gdw. R reflexiv, antisymmetrisch, transitiv ist.\\
@@ -241,11 +255,14 @@ Gerichteter Graph: \underline{$a \rightarrow b \rightarrow c$, $a \rightarrow c$
 
 \subsection{Verkn\"upfung}
 \textbf{Definition:} $R \subseteq A \times B$ und $S \subseteq B \times C$, Verkn\"upfung\\
-$S \circ R := \{ (x, z) \in A \times C | \exists y \in B : ( (x, y) \in R \land (y, z) \in S ) \}$
+$S \circ R := \{ (x, z) \in A \times C | \exists y \in B : ( (x, y) \in R \land (y, z) \in S ) \}$\\
+\textcolor{red}{$g \circ f = g(f)$}
 
 \subsection{Inverse Relation}
 Relation umdrehen: Beide Mengen vertauschen und Pfeile umdrehen $R^{-1}$.\\
 \textbf{Definition:} F\"ur $R \subseteq A \times B$, $R^{-1} = \{ (y, x) \in B \times A | (x, y) \in R \}$
+
+\textcolor{red}{Korrekt?} Inverse Relation einer bel. Funktion ist nur dann eine Funktion, wenn die Funktion bijektiv ist.
 
 %\end{small}
 
@@ -263,7 +280,11 @@ Nein, denn es sind z.b. $(1, -1) \in R_3$, aber auch $(1, 1) \in R_3$.
 Somit existieren f\"ur $x=1 \in \mathbb{R}$ zwei Elemente $y_1 = -1 \in \mathbb{R}$ und $y_2 = 1 \in \mathbb{R}$, so dass $(1, 1) \in R_3$ und $(1, -1) \in R_3$ ist.
 
 \subsection{Begriffe Funktionen}
-\includegraphics[width=0.95\linewidth]{./begriffe_funktionen.pdf}
+\textcolor{red}{Definition URBILD L.8-1(4) anschauen}\\
+\includegraphics[width=0.95\linewidth]{./begriffe_funktionen.pdf}\\
+\textbf{Urbild:} ist Menge\\
+$f(x) = x + 1$, testen: $x+1$ auf $\mathbb{R}$ definiert? $\rightarrow$ $x=y-1$: auch auf $\mathbb{R}$?\\
+$f(x) = 2x$, $f: \mathbb{N} \rightarrow \mathbb{N}$: Beachten bspw. $y=3$, im Wertebereich aber nicht im Bildbereich.
 
 
 
@@ -272,6 +293,11 @@ Somit existieren f\"ur $x=1 \in \mathbb{R}$ zwei Elemente $y_1 = -1 \in \mathbb{
 $\forall y \in B \exists x \in A : f(x) = y$, dh. falls $f(A) = B$\\
 \textbf{injektiv:} F\"ur zwei verschiedene Argumente $x_1, x_2 \in A$ sind die dazugeh\"origen Funktionswerte $f(x_1)$ und $f(x_2)$ unterschiedlich:\\
 $\forall x_1, x_2 \in A : (x_1 \not = x_2 \implies f(x_1) \not = f(x_2))$
+
+Inverse Funktion: $f(x) = 2x$, $(\mathbb{R} \rightarrow \mathbb{R})$, $f^{-1}(x) = 1/2 x$.
+
+
+
 
 
 \section{Graphen}
