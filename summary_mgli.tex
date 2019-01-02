@@ -410,7 +410,22 @@ $\rightarrow$ Erst durch Angabe von $k$ Anfangsbedingungen $f(1)$, $f(2)$, ..., 
 
 $f(1) = 1$, $f(n) = 1 + 2 \cdot f(n-1)$\\
 Nach Tabelle ``\textit{Inhomogene RG 1. Ordg. mit konst. $c$ und konst. $s$''}, somit Ansatz:\\
-$\rightarrow f(n) = \underbrace{1}_{a} \cdot {\underbrace{2}_{c}}^{n-1} + \frac{1 - 2^{n-1}}{1-2} \cdot 1$
+$\rightarrow f(n) = \underbrace{1}_{a} \cdot {\underbrace{2}_{c}}^{n-1} + \frac{1 - 2^{n-1}}{1-2} \cdot 1$\\
+
+\textbf{Verankerung:}\\
+$f(1) = 2^1 - 1 = 2-1 = 1$ gleich Ergebnis Definition Rekursion $f(1)$\\
+
+\textbf{Induktionsschritt:}\\
+$A(n-1) \implies A(n)$\\
+
+\textbf{Annahme:}\\
+$f(n-1) = 2^{n-1} - 1$ (besser, weil in RG auch $f(n-1)$ steht)\\
+
+\textbf{Behauptung:}\\
+$f(n) = 2^n - 1$\\
+
+\textbf{Beweis:}\\
+$f(n) = 1 + 2 \cdot f(n-1) \stackrel{\mbox{Ann.}}{=} 1 + 2(2^{n-1} - 1) = 1 + 2^n - 2 = 2^n -1$\\
 
 
 % $f(1) = 1$\\
@@ -421,7 +436,7 @@ $\rightarrow f(n) = \underbrace{1}_{a} \cdot {\underbrace{2}_{c}}^{n-1} + \frac{
 % \textbf{Beweis:}\\
 % $f(n) = 4 \cdot f(n-1) + 4^{n-1} = 4 \cdot (n-1)\cdot 4^{n-2} + 4^{n-1} = \dots = 4^{n-1} \cdot n$\\
 
-\textbf{Korrektheit des Induktionsschrittes im Beweis durch Einsetzen pr\"ufen:}\\
+\textbf{Beweis durch Einsetzen:}\\
 1) Gilt die explizite Darstellung der Zahlenfolge f\"ur $n=1$\\
 2) Ist die Gleichung korrekt, wenn die explizite Darstellung in die rekursive Definition eingesetzt wird?\\
 $\rightarrow$ Explizite L\"osung $f(n) \stackrel{?}{=}$ Gleichung gem. Rekursionsdef. $f(n) = s + c f(n-1)$
@@ -444,7 +459,8 @@ Inhomog. RG 1. Ord. mit konst. $c=c(n)$ und allgm. $s(n)$      & $f(n) = s(n) + 
              & & $d \in \mathbb{R}$, $p(n)$ spezielle (partikul\"are) L\"osg. der inhomog. Rekursion, und\\
              & & \textcolor{red}{nicht} L\"osung der zugeh\"origen homogenen Gleichung \\
 Homog. RG 2. Ord. mit konst. $c_1 = c_1(n)$ und $c_2 = c_2(n)$ & & \\
-Inhomog. RG 2. Ord. konst. $c_1 = c_1(n)$ und $c_2 = c_2(n)$ und allgem. $s(n)$ & & \\\hline
+Inhomog. RG 2. Ord. konst. $c_1 = c_1(n)$ und $c_2 = c_2(n)$ und allgem. $s(n)$ & & \\
+Nicht linear, 1. Ord. & $f(n) = 2 \cos (f(n-1))$, $f(n) = f(n-1)^2$ & \\\hline
 &&\\\\
 \end{tabular}
 
