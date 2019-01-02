@@ -121,21 +121,33 @@ Also m\"ussen in der DNF die Argumente der Klausel umgedreht werden (da sie in d
 %\begin{small}
 \subsection{Rechenregeln Quantoren}
 \begin{tabular}{lll}
-Verneinungss\"atze     & $\lnot (\forall x : A(x)) \iff \exists x : \lnot A(x) $ & \\
-                       & $\lnot (\forall x : \lnot A(x)) \iff \exists x : A(x) $ & \\
-                       & $\lnot (\exists x : A(x) \iff \forall x : \lnot A(x) $ & \\
-                       & $\lnot (\exists x : \lnot A(x)) \iff \forall x : A(x) $ & \\
+Verneinungss\"atze     & & \\
+$\lnot (\forall x \in M : A(x))       \iff \exists x \in M : \lnot A(x) $ & & \\
+$\lnot (\forall x \in M : \lnot A(x)) \iff \exists x \in M : A(x) $ & & \\
+$\lnot (\exists x \in M : A(x)        \iff \forall x \in M : \lnot A(x) $ & & \\
+$\lnot (\exists x \in M : \lnot A(x)) \iff \forall x \in M : A(x) $ & & \\
 & & \\
-Vertauschbarkeitss\"atze & $ \forall x, y : A(x, y) \iff \forall y, x : A(x, y) $ & \\
-                         & $ \exists x, y : A(x, y) \iff \exists y, x : A(x, y) $ & \\
-                         & $ \exists x \forall y : A(x, y) \textcolor{red}{\implies} \forall y \exists x : A(x, y) $ & \\\\
-                         & $ \forall x : A(x) \textcolor{red}{\implies} \exists x : A(x) $ & \\
-                         & $ \exists ! x : A(x) \textcolor{red}{\implies} \exists x : A(x) $ & \\
+
+Vertauschbarkeitss\"atze & & \\
+$ \forall x \in M, y \in N : A(x, y) \iff \forall y \in N, x \in M : A(x, y) $ & & \\
+$ \exists x \in M, y \in N : A(x, y) \iff \exists y \in N, x \in M: A(x, y) $ & & \\
+$ \exists x \in M : \forall y \in N : A(x, y) \textcolor{red}{\implies} \forall y \in N : \exists x \in M : A(x, y) $ & & \\\\
+$ \forall x \in M : A(x) \textcolor{red}{\implies} \exists x \in M : A(x)   $ & & \\
+$ \exists ! x \in M : A(x) \textcolor{red}{\implies} \exists x \in M : A(x) $ & &\\
 \end{tabular}
+
 \textbf{Sprachgebrauch:}\\
 ``Einige meiner Freunde sind schlau.'' $\iff$ $\exists x : F(x) \land S(x) $\\
 $\exists x : (\forall y : A(x, y))$: ``\textit{Es gibt (mind.) ein Produkt, welches im Korb jeder Person liegt.}''\\
-$\forall y : (\exists x : A(x, y))$: ``\textit{Alle Personen haben (mind.) 1 Produkt im Korb.}''
+$\forall y : (\exists x : A(x, y))$: ``\textit{Alle Personen haben (mind.) 1 Produkt im Korb.}''\\
+
+\begin{tabular}{l c l}
+Verteilungss\"atze & & \\
+$\exists x \in M: (P(x) \lor Q(x))$ & $\iff$ & $(\exists x \in M : P(x)) \lor (\exists x \in M : Q(x))$\\
+$\exists x \in M: (P(x) \land Q(x))$ & $\implies$ & $(\exists x \in M : P(x)) \land (\exists x \in M : Q(x))$\\
+$\forall x \in M: (P(x) \lor Q(x))$ & $\impliedby$ & $(\forall x \in M : P(x)) \lor (\forall x \in M : Q(x))$\\
+$\forall x \in M: (P(x) \land Q(x))$ & $\iff$ & $(\forall x \in M : P(x)) \land (\forall x \in M : Q(x))$\\
+\end{tabular}
 
 
 
@@ -262,8 +274,8 @@ $S \circ R := \{ (x, z) \in A \times C | \exists y \in B : ( (x, y) \in R \land 
 Relation umdrehen: Beide Mengen vertauschen und Pfeile umdrehen $R^{-1}$.\\
 \textbf{Definition:} F\"ur $R \subseteq A \times B$, $R^{-1} = \{ (y, x) \in B \times A | (x, y) \in R \}$
 
-\textcolor{red}{Korrekt?} Inverse Relation einer bel. Funktion ist nur dann eine Funktion, wenn die Funktion bijektiv ist.
-
+\textcolor{red}{Korrekt?} Inverse Relation einer bel. Funktion ist nur dann eine Funktion, wenn die Funktion bijektiv ist.\\
+\textcolor{red}{Aufgaben aus SZP}
 %\end{small}
 
 
@@ -379,8 +391,96 @@ Graphen isomorph unterscheiden sich nur durch Anordnung und Benennung der Knoten
 Es existiert eine bijektive Funktion $f: V \rightarrow V'$
 
 
-%\end{small}
+\section{\textcolor{red}{Induktion}}
+
+\section{\textcolor{red}{Rekursion}}
+
+Lineare Rekursionsgleichung $k$-ter Ordnung mit St\"orterm:\\
+$f(n) = s(n) + \sum_{i=1}^k c_{n-i}(n) \cdot f(n-i)$\\
+$s(n)$ St\"orterm, $k$-te Ordnung, $c(n)$ abh\"angige Koeffizientenfunktionen. ``homogen'': St\"orterm $= 0$.\\
+$\rightarrow$ Erst durch Angabe von $k$ Anfangsbedingungen $f(1)$, $f(2)$, ..., $f(k)$ eindeutig bestimmt.
+
+\subsection{Rekursionsgraph}
+1) Anfangswerte zu Bl\"attern hinzuf\"ugen\\
+2) Im Baum aufsteigend f\"ur jeden Vorg\"anger gem. $f$ den Funktionswert ausrechnen und hinschreiben, bis bei Wurzel $f(n)$ angekommen und so den Funktionswert $f(n)$ (die Auswertung) f\"ur das vorgegebene $n$ erhalten
+
+
+
+\subsection{Beweis Rekursionsgleichung}
+
+$f(1) = 1$, $f(n) = 1 + 2 \cdot f(n-1)$\\
+Nach Tabelle ``\textit{Inhomogene RG 1. Ordg. mit konst. $c$ und konst. $s$''}, somit Ansatz:\\
+$\rightarrow f(n) = \underbrace{1}_{a} \cdot {\underbrace{2}_{c}}^{n-1} + \frac{1 - 2^{n-1}}{1-2} \cdot 1$
+
+
+% $f(1) = 1$\\
+% $f(n) = 4 \cdot f(n-1) + 4^{n-1}$, f\"ur $n \in \mathbb{N}$ mit $n \geq 2$.\\
+% $\rightarrow$ $f(n) = 4^{n-1} \cdot n$.\\
+% \textbf{Annahme:} $f(n-1) = (n-1) \cdot 4^{n-2}$\\
+% \textbf{Behauptung:} $f(n) = n \cdot 4^{n-1}$ f\"ur rekursive Formel\\
+% \textbf{Beweis:}\\
+% $f(n) = 4 \cdot f(n-1) + 4^{n-1} = 4 \cdot (n-1)\cdot 4^{n-2} + 4^{n-1} = \dots = 4^{n-1} \cdot n$\\
+
+\textbf{Korrektheit des Induktionsschrittes im Beweis durch Einsetzen pr\"ufen:}\\
+1) Gilt die explizite Darstellung der Zahlenfolge f\"ur $n=1$\\
+2) Ist die Gleichung korrekt, wenn die explizite Darstellung in die rekursive Definition eingesetzt wird?\\
+$\rightarrow$ Explizite L\"osung $f(n) \stackrel{?}{=}$ Gleichung gem. Rekursionsdef. $f(n) = s + c f(n-1)$
+
+
+
+
 
 
 \end{multicols}
+\subsection{Rekursionsgleichungen}
+\begin{tabular}{lll}
+\hline
+Homogene RG 1. Ord.                                            & $f(n) = c(n) \cdot f(n-1)$ mit $f(1) = a$, $a \in \mathbb{R}$ & Iteration: $f(n-1)$, $f(n-2)$, ... einsetzen \\
+Homogene RG 1. Ord. mit $c=c(n)$ konst.                        & $f(n) = c \cdot f(n-1)$ & $f(n) = a \cdot c^{n-1}$ \\
+Inhomog. RG 1. Ord.                                            & $f(n) = s(n) + c(n) \cdot f(n-1)$, $f(1) = a$ & $f(n-1)$, $f(n-2)$, ... einsetzen \\
+Inhomog. RG 1. Ord. mit konst. $c=c(n)$ und $s=s(n)$           & $f(n) = c \cdot f(n-1) + s$, $f(1) = a$, $a \in \mathbb{R}$ & $c \neq 1$: $f(n) = a \cdot c^{n-1} + \frac{1 - c^{n-1}}{1-c} \cdot s$ (\textbf{Achtung:} St\"orterm!)\\
+& & $c = 1$: $a + (n-1) \cdot s$ \\
+Inhomog. RG 1. Ord. mit konst. $c=c(n)$ und allgm. $s(n)$      & $f(n) = s(n) + c\cdot f(n-1)$, mit $c \in \mathbb{R}$ und $f(1) = a \in \mathbb{R}$ & $f(n) =$ ``\textit{allg. L\"osung der dazugeh. homog. Gleichung}'' $+ p(n) = d\cdot c^{n-1} + p(n)$\\
+             & & $d \in \mathbb{R}$, $p(n)$ spezielle (partikul\"are) L\"osg. der inhomog. Rekursion, und\\
+             & & \textcolor{red}{nicht} L\"osung der zugeh\"origen homogenen Gleichung \\
+Homog. RG 2. Ord. mit konst. $c_1 = c_1(n)$ und $c_2 = c_2(n)$ & & \\
+Inhomog. RG 2. Ord. konst. $c_1 = c_1(n)$ und $c_2 = c_2(n)$ und allgem. $s(n)$ & & \\\hline
+&&\\\\
+\end{tabular}
+
+
+
+
+\setlength{\columnsep}{1cm}
+\begin{multicols}{3}
+
+
+\subsection{Vorgehen Bestimmung Explizite Darstellung}
+1) Zahlenbeispiele mithilfe rekursiver Darstellung\\
+2) Induktives Schliessen\\
+3) Vermutung f\"ur explizite Darstellung\\
+4) Vollst\"andige Induktion oder Einsetzen\\
+5) Explizite Darstellung
+
+\subsection{Ans\"atze für $s(n)$:}
+\begin{tabular}{ll}
+$s(n)$ & Ansatz f\"ur $p(n)$ \\\hline
+6      & $x$ \\
+$n$      & $xn + y$ \\
+$n^2$    & $xn^2 + yn + z$\\
+5$^n$    & $t \cdot 5^n$ \\
+$n \cdot 7^n$ & $(xn + y) \cdot 7^n$ \\
+$n^2 \cdot 7^n$ & $(xn^2 + yn + z) \cdot 7^n$ \\\hline
+\\
+\end{tabular}
+
+\textbf{Zugeh\"orige homogene Rekursionsgleichung:}\\
+$f(n) = s(n) + \underbrace{\sum_{i=1}^k c_{n-1}(i) \cdot f(n-i)}_{= h(n)}$\\
+$h(n)$: ``\textit{zugeh\"orige homogene Rekursionsgleichung}''.\\
+\textbf{\textcolor{red}{Achtung:}} $h(n) = \sum_{i=1}^k c_{n-i}(n) \cdot \textcolor{red}{h}(n-i)$
+
+\end{multicols}
+
+
+
 \end{document}
